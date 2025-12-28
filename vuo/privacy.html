@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Vuo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.7;
+        }
+        .header {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            color: #333;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #43e97b;
+            font-size: 1.5rem;
+        }
+        h3 {
+            color: #444;
+            margin: 25px 0 15px 0;
+            font-size: 1.2rem;
+        }
+        p {
+            margin-bottom: 16px;
+            color: #555;
+        }
+        ul, ol {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #43e97b15 0%, #38f9d715 100%);
+            border-left: 4px solid #43e97b;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .effective-date {
+            background: #e9ecef;
+            padding: 16px 24px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+        .contact-section {
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        .contact-section h2 {
+            margin-top: 0;
+            border-bottom: none;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🖥️ Vuo</h1>
+        <p>Privacy Policy</p>
+    </div>
+    
+    <div class="container">
+        <a href="../index.html" class="back-link">← Back to All Apps</a>
+        
+        <div class="effective-date">
+            <strong>Effective Date:</strong> December 28, 2025<br>
+            <strong>Last Updated:</strong> December 28, 2025
+        </div>
+
+        <p>This Privacy Policy describes how Vuo ("we", "us", or "our") collects, uses, and protects information when you use our serverless remote control application ("App"). We are committed to protecting your privacy while enabling secure peer-to-peer connections.</p>
+
+        <div class="highlight-box">
+            <strong>Serverless Architecture:</strong> Vuo uses peer-to-peer (P2P) WebRTC technology. Your screen sharing data travels directly between your devices without passing through our servers. We cannot see, access, or store your screen content.
+        </div>
+
+        <h2>1. How Vuo Works</h2>
+        <p>Vuo enables remote control and screen sharing between your devices using:</p>
+        <ul>
+            <li><strong>WebRTC:</strong> Direct peer-to-peer connection between devices</li>
+            <li><strong>QR Code Pairing:</strong> Secure device pairing without accounts</li>
+            <li><strong>Firebase Signaling:</strong> Only used to establish initial connection (no content passes through)</li>
+        </ul>
+
+        <h2>2. Information We Collect</h2>
+        
+        <h3>2.1 Connection Data (Temporary)</h3>
+        <p>To establish P2P connections, we temporarily process:</p>
+        <ul>
+            <li><strong>Connection IDs:</strong> Random identifiers for pairing devices</li>
+            <li><strong>ICE Candidates:</strong> Network information to establish direct connections</li>
+            <li><strong>Session Descriptions:</strong> Technical data for WebRTC handshake</li>
+        </ul>
+        <p>This data is:</p>
+        <ul>
+            <li>Automatically deleted after connection is established</li>
+            <li>Never stored permanently</li>
+            <li>Not associated with any personal information</li>
+        </ul>
+
+        <h3>2.2 Screen Content</h3>
+        <div class="warning-box">
+            <strong>Important:</strong> Screen sharing content travels directly between your devices via encrypted P2P connection. We <strong>never</strong> have access to your screen content, mouse movements, keyboard input, or any data you share between devices.
+        </div>
+
+        <h3>2.3 Third-Party Data Collection</h3>
+        <div class="highlight-box">
+            <strong>Google AdMob:</strong> Our app displays advertisements through Google AdMob. AdMob may collect device identifiers, IP address, and usage data to serve personalized ads. You can opt out of personalized advertising in your device settings.
+        </div>
+
+        <h2>3. Permissions Explained</h2>
+        
+        <table>
+            <tr>
+                <th>Permission</th>
+                <th>Purpose</th>
+                <th>Data Handling</th>
+            </tr>
+            <tr>
+                <td>Screen Capture / Media Projection</td>
+                <td>Share your screen with connected device</td>
+                <td>P2P encrypted, never stored</td>
+            </tr>
+            <tr>
+                <td>Accessibility Service</td>
+                <td>Enable remote control input</td>
+                <td>Local processing only</td>
+            </tr>
+            <tr>
+                <td>Camera</td>
+                <td>Scan QR code for device pairing</td>
+                <td>Not stored or transmitted</td>
+            </tr>
+            <tr>
+                <td>Internet</td>
+                <td>P2P connection, signaling, ads</td>
+                <td>Encrypted WebRTC streams</td>
+            </tr>
+            <tr>
+                <td>Foreground Service</td>
+                <td>Maintain connection in background</td>
+                <td>No data collection</td>
+            </tr>
+        </table>
+
+        <h2>4. Accessibility Service Usage</h2>
+        <div class="warning-box">
+            <strong>Accessibility Service Disclosure:</strong> Vuo uses Android's Accessibility Service to enable remote control functionality. This service is used <strong>only</strong> to:
+            <ul style="margin-top: 12px;">
+                <li>Simulate touch events from the remote device</li>
+                <li>Enable keyboard input from the remote device</li>
+            </ul>
+            <p style="margin-top: 12px; margin-bottom: 0;">We do <strong>not</strong> use the Accessibility Service to collect, store, or transmit any personal information, passwords, or sensitive data.</p>
+        </div>
+
+        <h2>5. Third-Party Services</h2>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Purpose</th>
+                <th>Data Shared</th>
+            </tr>
+            <tr>
+                <td>Firebase (REST API)</td>
+                <td>Signaling for connection setup</td>
+                <td>Temporary connection metadata only</td>
+            </tr>
+            <tr>
+                <td>Google AdMob</td>
+                <td>Advertising</td>
+                <td>Device identifiers, usage data</td>
+            </tr>
+        </table>
+
+        <h2>6. Data Security</h2>
+        <ul>
+            <li><strong>End-to-End Encryption:</strong> All P2P communication is encrypted using DTLS/SRTP</li>
+            <li><strong>No Server Storage:</strong> Your screen content never touches our servers</li>
+            <li><strong>Temporary Signaling:</strong> Connection setup data is automatically deleted</li>
+            <li><strong>No Accounts Required:</strong> No personal information needed to use the app</li>
+        </ul>
+
+        <h2>7. Data Sharing</h2>
+        <p>We do <strong>not</strong> share your personal data. The only data that may be shared:</p>
+        <ul>
+            <li>Advertising data with Google AdMob</li>
+            <li>Temporary signaling data through Firebase (auto-deleted)</li>
+        </ul>
+
+        <h2>8. Your Rights and Choices</h2>
+        <ul>
+            <li><strong>End Session:</strong> Disconnect at any time to stop all data sharing</li>
+            <li><strong>Deny Permissions:</strong> You can deny permissions (app may not function)</li>
+            <li><strong>Opt-out of Personalized Ads:</strong> Adjust in your device's Google settings</li>
+            <li><strong>Disable Accessibility Service:</strong> Turn off in Android settings when not in use</li>
+        </ul>
+
+        <h2>9. Children's Privacy</h2>
+        <p>Vuo is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+        <h2>10. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last Updated" date.</p>
+
+        <div class="contact-section">
+            <h2>11. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <p><strong>Email:</strong> <a href="mailto:hudaiapa88@gmail.com">hudaiapa88@gmail.com</a></p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 Vuo. All rights reserved.</p>
+    </footer>
+</body>
+</html>

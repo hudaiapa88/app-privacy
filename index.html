@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Privacy Policies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .app-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        .app-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+        .app-card h2 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1.4rem;
+        }
+        .app-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+        .app-links {
+            display: flex;
+            gap: 12px;
+        }
+        .app-links a {
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+        .privacy-link {
+            background: #667eea;
+            color: white;
+        }
+        .privacy-link:hover {
+            background: #5a6fd6;
+        }
+        /* App-specific colors */
+        .libris .app-icon { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .qubik .app-icon { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .vuo .app-icon { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+        .seccadem .app-icon { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 App Privacy Policies</h1>
+        
+        <div class="apps-grid">
+            <div class="app-card libris">
+                <div class="app-icon">📚</div>
+                <h2>Libris</h2>
+                <p>Premium E-Book Reader with advanced features including translation, text-to-speech, and cloud sync.</p>
+                <div class="app-links">
+                    <a href="libris/privacy.html" class="privacy-link">Privacy Policy</a>
+                </div>
+            </div>
+            
+            <div class="app-card qubik">
+                <div class="app-icon">📷</div>
+                <h2>Qubik</h2>
+                <p>QR & Barcode Scanner with generation capabilities, scan history, and batch export features.</p>
+                <div class="app-links">
+                    <a href="qubik/privacy.html" class="privacy-link">Privacy Policy</a>
+                </div>
+            </div>
+            
+            <div class="app-card vuo">
+                <div class="app-icon">🖥️</div>
+                <h2>Vuo</h2>
+                <p>Serverless Remote Control app with P2P screen sharing and cross-platform support.</p>
+                <div class="app-links">
+                    <a href="vuo/privacy.html" class="privacy-link">Privacy Policy</a>
+                </div>
+            </div>
+            
+            <div class="app-card seccadem">
+                <div class="app-icon">🕌</div>
+                <h2>Seccadem</h2>
+                <p>Islamic Prayer Assistant with prayer times, Qibla compass, tasbih counter, and worship tracking.</p>
+                <div class="app-links">
+                    <a href="seccadem/privacy.html" class="privacy-link">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Contact: <a href="mailto:hudaiapa88@gmail.com">hudaiapa88@gmail.com</a></p>
+            <p style="margin-top: 8px;">Last updated: December 28, 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
