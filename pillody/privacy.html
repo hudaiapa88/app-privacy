@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Pillody</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.7;
+        }
+        .header {
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 45%, #2c5364 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.92;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #1f6f8b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            color: #333;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2c5364;
+            font-size: 1.5rem;
+        }
+        h3 {
+            color: #444;
+            margin: 25px 0 15px 0;
+            font-size: 1.2rem;
+        }
+        p {
+            margin-bottom: 16px;
+            color: #555;
+        }
+        ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(44, 83, 100, 0.10) 0%, rgba(15, 32, 39, 0.10) 100%);
+            border-left: 4px solid #2c5364;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background: #eef4f8;
+            border-left: 4px solid #1f6f8b;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .effective-date {
+            background: #e9ecef;
+            padding: 16px 24px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+            vertical-align: top;
+        }
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+        .contact-section {
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        .contact-section h2 {
+            margin-top: 0;
+            border-bottom: none;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎧 Pillody</h1>
+        <p>Privacy Policy</p>
+    </div>
+
+    <div class="container">
+        <a href="../index.html" class="back-link">← Back to All Apps</a>
+
+        <div class="effective-date">
+            <strong>Effective Date:</strong> April 11, 2026<br>
+            <strong>Last Updated:</strong> April 11, 2026
+        </div>
+
+        <p>This Privacy Policy describes how Pillody ("we", "us", or "our") handles information when you use our neuroscience-based audio therapy application ("App"). Pillody is designed so that your personal session history and saved mixes stay under your control.</p>
+
+        <div class="highlight-box">
+            <strong>No Central User Data Backend:</strong> Pillody does not use a developer-controlled backend to store your names, saved mixes, reminder settings, or session history. Those records stay on your device. Remote network access is used mainly to stream or download audio assets.
+        </div>
+
+        <h2>1. Information We Collect</h2>
+
+        <h3>1.1 Information Stored Locally on Your Device</h3>
+        <ul>
+            <li><strong>Onboarding details:</strong> First name, last name, recommended category, and recommended preset if you provide them.</li>
+            <li><strong>Saved mixes and presets:</strong> Custom mixes you create and the settings used to play them.</li>
+            <li><strong>Session records:</strong> Listening history, duration counters, and last played session metadata.</li>
+            <li><strong>Preferences:</strong> Notification state, reminder time, headphone mode, haptic settings, dark mode, and audio network policy.</li>
+            <li><strong>Downloaded audio paths:</strong> References to audio files downloaded for offline playback.</li>
+        </ul>
+
+        <h3>1.2 Remote Audio Delivery</h3>
+        <div class="warning-box">
+            <strong>Important:</strong> Pillody may stream or download audio files from Cloudflare R2 or a CDN endpoint. This allows playback without operating a central backend for your personal session records.
+        </div>
+        <ul>
+            <li><strong>Audio requests:</strong> When you stream or download a track, the hosting provider receives standard request data such as IP address, requested file path, and technical connection metadata.</li>
+            <li><strong>Offline playback:</strong> If you download tracks, the files are stored locally on your device for later playback.</li>
+        </ul>
+
+        <h3>1.3 Network and Device Handling</h3>
+        <p>Pillody checks your connection type to decide whether remote streaming is allowed or whether a track should be downloaded first. This is used only to manage playback behavior on your device.</p>
+
+        <h2>2. Permissions Explained</h2>
+
+        <table>
+            <tr>
+                <th>Permission</th>
+                <th>Purpose</th>
+                <th>Data Handling</th>
+            </tr>
+            <tr>
+                <td>Internet</td>
+                <td>Stream or download audio assets, open external links, and share content</td>
+                <td>Only audio delivery and user-initiated network actions; no central user data database</td>
+            </tr>
+            <tr>
+                <td>Notifications and Exact Alarm</td>
+                <td>Daily reminders and scheduled session prompts</td>
+                <td>Reminder settings are stored locally and used for on-device notifications</td>
+            </tr>
+            <tr>
+                <td>Foreground Service</td>
+                <td>Maintain audio playback and reminder behavior when needed</td>
+                <td>No personal session database is uploaded</td>
+            </tr>
+            <tr>
+                <td>Vibration</td>
+                <td>Haptic feedback and reminder alerts</td>
+                <td>Processed locally on your device</td>
+            </tr>
+        </table>
+
+        <h2>3. How We Use Information</h2>
+
+        <table>
+            <tr>
+                <th>Purpose</th>
+                <th>Data Used</th>
+                <th>Where It Is Handled</th>
+            </tr>
+            <tr>
+                <td>Personalize the experience</td>
+                <td>Onboarding data, recommended category, saved preferences</td>
+                <td>Your device</td>
+            </tr>
+            <tr>
+                <td>Play and resume sessions</td>
+                <td>Last played preset, elapsed playback, session history</td>
+                <td>Your device</td>
+            </tr>
+            <tr>
+                <td>Store custom mixes</td>
+                <td>Saved preset definitions and related track settings</td>
+                <td>Your device</td>
+            </tr>
+            <tr>
+                <td>Stream or download audio</td>
+                <td>Requested audio object keys and connection metadata</td>
+                <td>Cloudflare R2 or CDN for file delivery</td>
+            </tr>
+            <tr>
+                <td>Send reminders</td>
+                <td>Reminder time and enabled state</td>
+                <td>Local notifications on your device</td>
+            </tr>
+        </table>
+
+        <h2>4. Data Storage and Security</h2>
+
+        <ul>
+            <li><strong>Local storage:</strong> Pillody stores personal settings, mix definitions, and session history on-device using local storage.</li>
+            <li><strong>Downloaded media:</strong> Audio files you download are stored locally for offline playback and can be removed by clearing downloads or app data.</li>
+            <li><strong>No central backend for your records:</strong> We do not operate a server that stores your private session logs, names, or saved presets as a user profile database.</li>
+            <li><strong>User control:</strong> You decide whether to stream remotely, download first, or keep usage fully local.</li>
+        </ul>
+
+        <h2>5. Third-Party Services</h2>
+
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Purpose</th>
+                <th>Data Shared</th>
+            </tr>
+            <tr>
+                <td>Cloudflare R2 or CDN endpoint</td>
+                <td>Host and deliver audio assets</td>
+                <td>IP address, requested file path, and standard request metadata</td>
+            </tr>
+            <tr>
+                <td>Android or iOS local notification framework</td>
+                <td>Show reminders on your device</td>
+                <td>Handled locally by the operating system</td>
+            </tr>
+        </table>
+
+        <h2>6. Data Sharing</h2>
+
+        <p>We do <strong>not</strong> sell or rent your personal session data. Information leaves your device only when:</p>
+        <ul>
+            <li>You stream or download remote audio assets.</li>
+            <li>You intentionally share content or open an external link.</li>
+            <li>Your operating system handles local reminder scheduling.</li>
+        </ul>
+
+        <h2>7. Your Rights and Choices</h2>
+
+        <ul>
+            <li><strong>Choose your audio policy:</strong> You can favor offline downloads, Wi-Fi only streaming, or broader streaming behavior inside the app.</li>
+            <li><strong>Disable reminders:</strong> You can turn notifications off in the app or through device settings.</li>
+            <li><strong>Delete local data:</strong> You can clear app data or uninstall the app to remove locally stored records.</li>
+            <li><strong>Remove downloaded media:</strong> You can delete downloaded audio files from the app-managed storage on your device.</li>
+        </ul>
+
+        <div class="contact-section">
+            <h2>8. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <p><strong>Email:</strong> <a href="mailto:hudaiapa88@gmail.com">hudaiapa88@gmail.com</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Pillody. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - LumoMath</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.7;
+        }
+        .header {
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.92;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #d97706;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            color: #333;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f59e0b;
+            font-size: 1.5rem;
+        }
+        h3 {
+            color: #444;
+            margin: 25px 0 15px 0;
+            font-size: 1.2rem;
+        }
+        p {
+            margin-bottom: 16px;
+            color: #555;
+        }
+        ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.10) 0%, rgba(253, 160, 133, 0.10) 100%);
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .effective-date {
+            background: #e9ecef;
+            padding: 16px 24px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+            vertical-align: top;
+        }
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+        .contact-section {
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        .contact-section h2 {
+            margin-top: 0;
+            border-bottom: none;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🧮 LumoMath</h1>
+        <p>Privacy Policy</p>
+    </div>
+
+    <div class="container">
+        <a href="../index.html" class="back-link">← Back to All Apps</a>
+
+        <div class="effective-date">
+            <strong>Effective Date:</strong> April 11, 2026<br>
+            <strong>Last Updated:</strong> April 11, 2026
+        </div>
+
+        <p>This Privacy Policy explains how LumoMath ("we", "us", or "our") handles information when you use our mathematics training application ("App"). LumoMath is built to work primarily on-device without a developer-controlled backend.</p>
+
+        <div class="highlight-box">
+            <strong>Offline-First Learning:</strong> LumoMath stores your practice sessions, progress metrics, streaks, review queue, and reminder settings on your device. The current build does not require a central account or a server that stores your learning history.
+        </div>
+
+        <h2>1. Information We Collect</h2>
+
+        <h3>1.1 Learning Data Stored on Your Device</h3>
+        <ul>
+            <li><strong>Onboarding preferences:</strong> Initial setup status, preferred language, and related local app choices.</li>
+            <li><strong>Daily and weekly plans:</strong> Generated study plans, task lists, and active session state.</li>
+            <li><strong>Practice history:</strong> Attempt records, completed sessions, session summaries, streaks, and checkpoint results.</li>
+            <li><strong>Progress metrics:</strong> Mastery levels, review queue items, topic insights, recent performance, and reminder settings.</li>
+        </ul>
+
+        <h3>1.2 Reminder and App State Information</h3>
+        <ul>
+            <li><strong>Reminder schedule:</strong> Whether reminders are enabled and the time you select.</li>
+            <li><strong>Device-side app state:</strong> Session resume data and storage migration flags used to keep the app stable across updates.</li>
+        </ul>
+
+        <h3>1.3 What We Do Not Collect</h3>
+        <p>LumoMath does not require you to create a central account to use the core learning experience, and the current build does not send your session history or mastery data to a developer-controlled backend.</p>
+
+        <h2>2. Permissions Explained</h2>
+
+        <table>
+            <tr>
+                <th>Permission</th>
+                <th>Purpose</th>
+                <th>Data Handling</th>
+            </tr>
+            <tr>
+                <td>Notifications</td>
+                <td>Daily study reminders</td>
+                <td>Reminder schedule is stored on-device and used for local notifications</td>
+            </tr>
+            <tr>
+                <td>Exact Alarm</td>
+                <td>Deliver reminders at the selected time</td>
+                <td>No study history is sent to our servers</td>
+            </tr>
+            <tr>
+                <td>Receive Boot Completed</td>
+                <td>Restore local reminders after device restart</td>
+                <td>Processed on-device only</td>
+            </tr>
+            <tr>
+                <td>Vibration</td>
+                <td>Reminder feedback</td>
+                <td>No personal data transmission</td>
+            </tr>
+        </table>
+
+        <h2>3. How We Use Information</h2>
+
+        <table>
+            <tr>
+                <th>Purpose</th>
+                <th>Data Used</th>
+                <th>Where It Is Stored</th>
+            </tr>
+            <tr>
+                <td>Generate study plans</td>
+                <td>Local progress, attempts, review queue, streak data</td>
+                <td>Your device</td>
+            </tr>
+            <tr>
+                <td>Resume sessions</td>
+                <td>Active session and block session state</td>
+                <td>Your device</td>
+            </tr>
+            <tr>
+                <td>Show progress dashboards</td>
+                <td>Session history, mastery, topic metrics</td>
+                <td>Your device</td>
+            </tr>
+            <tr>
+                <td>Schedule reminders</td>
+                <td>Reminder time and enabled state</td>
+                <td>Local notification framework on your device</td>
+            </tr>
+        </table>
+
+        <h2>4. Data Storage and Security</h2>
+
+        <ul>
+            <li><strong>Local storage:</strong> LumoMath stores learning and progress data using on-device storage mechanisms.</li>
+            <li><strong>No central backend:</strong> We do not operate a developer-controlled service that stores your daily plan, attempts, mastery records, or session history.</li>
+            <li><strong>No mandatory account:</strong> You can use the app without creating an online profile for the core learning flow.</li>
+            <li><strong>User control:</strong> Clearing app data or uninstalling the app removes the locally stored records from your device.</li>
+        </ul>
+
+        <h2>5. Third-Party Services</h2>
+
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Purpose</th>
+                <th>Data Shared</th>
+            </tr>
+            <tr>
+                <td>Android or iOS local notification framework</td>
+                <td>Show daily reminders on your device</td>
+                <td>Handled locally by the operating system</td>
+            </tr>
+        </table>
+
+        <h2>6. Data Sharing</h2>
+
+        <p>We do <strong>not</strong> sell, rent, or trade your learning history. In the current build, your study data is not shared with a developer-controlled backend.</p>
+
+        <h2>7. Your Rights and Choices</h2>
+
+        <ul>
+            <li><strong>Disable reminders:</strong> You can turn off notifications or exact alarms in your device settings.</li>
+            <li><strong>Delete local data:</strong> You can clear app data or uninstall the app at any time.</li>
+            <li><strong>No account deletion flow needed:</strong> The core learning experience does not depend on a central user account.</li>
+            <li><strong>Review app permissions:</strong> You can manage notification-related permissions from your device settings.</li>
+        </ul>
+
+        <div class="contact-section">
+            <h2>8. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <p><strong>Email:</strong> <a href="mailto:hudaiapa88@gmail.com">hudaiapa88@gmail.com</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 LumoMath. All rights reserved.</p>
+    </footer>
+</body>
+</html>
