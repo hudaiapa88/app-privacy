@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Linkpad</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.7;
+        }
+        .header {
+            background: linear-gradient(135deg, #0d9488 0%, #06b6d4 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.92;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #0d9488;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            color: #333;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #0d9488;
+            font-size: 1.5rem;
+        }
+        h3 {
+            color: #444;
+            margin: 25px 0 15px 0;
+            font-size: 1.2rem;
+        }
+        p {
+            margin-bottom: 16px;
+            color: #555;
+        }
+        ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(13, 148, 136, 0.10) 0%, rgba(6, 182, 212, 0.10) 100%);
+            border-left: 4px solid #0d9488;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .info-box {
+            background: #ecfdfa;
+            border-left: 4px solid #14b8a6;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .effective-date {
+            background: #e9ecef;
+            padding: 16px 24px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+            vertical-align: top;
+        }
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+        .contact-section {
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        .contact-section h2 {
+            margin-top: 0;
+            border-bottom: none;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔗 Linkpad</h1>
+        <p>Privacy Policy</p>
+    </div>
+
+    <div class="container">
+        <a href="../index.html" class="back-link">← Back to All Apps</a>
+
+        <div class="effective-date">
+            <strong>Effective Date:</strong> July 10, 2026<br>
+            <strong>Last Updated:</strong> July 10, 2026
+        </div>
+
+        <p>This Privacy Policy describes how Linkpad ("we", "us", or "our") handles information when you use our local-first link management application ("App"). Linkpad is designed to keep your saved links, notes, and collections on your device.</p>
+
+        <div class="highlight-box">
+            <strong>No Central Backend:</strong> Linkpad does not require an account and does not store your links, notes, or collections on a developer-controlled server. All your data stays on your device. The app makes limited network requests only to fetch metadata (title, description, images) from the websites you choose to save.
+        </div>
+
+        <h2>1. Information We Collect</h2>
+
+        <h3>1.1 Links and Content You Save</h3>
+        <p>Linkpad stores the following information locally on your device:</p>
+        <ul>
+            <li><strong>Saved links:</strong> URLs you save via the share sheet or manual entry, along with fetched metadata (title, description, preview image, favicon, author, site name).</li>
+            <li><strong>Notes and snippets:</strong> Personal notes you attach to links and article snippets extracted for quick preview.</li>
+            <li><strong>Collections and tags:</strong> Folders, categories, and tags you create to organize your links.</li>
+            <li><strong>Search history:</strong> Recent search queries you perform within the app.</li>
+            <li><strong>Gamification data:</strong> Local stats such as links saved, reading streaks, and achievement progress.</li>
+            <li><strong>App settings:</strong> Theme, language, notification preferences, and other configuration options.</li>
+        </ul>
+
+        <h3>1.2 Data You Explicitly Choose to Import</h3>
+        <ul>
+            <li><strong>Bookmark files:</strong> HTML bookmark exports, JSON files (e.g., from Raindrop), or CSV files you select through the system file picker. These are parsed locally to extract URLs and titles.</li>
+            <li><strong>Shared links:</strong> Links shared to Linkpad from other apps via the system share sheet.</li>
+        </ul>
+
+        <h3>1.3 Limited Online Requests</h3>
+        <div class="info-box">
+            <strong>Your link data is not uploaded to our servers.</strong> The app makes network requests only to fetch metadata from the original websites you save, and to display ads if applicable.
+        </div>
+        <ul>
+            <li><strong>Metadata fetching:</strong> When you save a link, Linkpad requests the target website's page to extract Open Graph, oEmbed, or platform-specific metadata (title, description, images). These requests go directly to the website's server, not to a developer backend.</li>
+            <li><strong>Reader mode:</strong> When you open an article in the built-in reader, Linkpad fetches the page HTML from the original URL and parses it locally for a clean reading experience.</li>
+            <li><strong>Offline queue:</strong> If you save links while offline, they are queued locally and metadata is fetched automatically when connectivity is restored.</li>
+            <li><strong>Advertising:</strong> Google AdMob may collect device identifiers, IP address, and ad interaction data under Google's own privacy terms.</li>
+        </ul>
+
+        <h2>2. Permissions Explained</h2>
+
+        <table>
+            <tr>
+                <th>Permission or Access</th>
+                <th>Purpose</th>
+                <th>How Data Is Handled</th>
+            </tr>
+            <tr>
+                <td>Notifications and Exact Alarm</td>
+                <td>Schedule link reminders and reading notifications</td>
+                <td>Reminder metadata stays on device; local notifications only</td>
+            </tr>
+            <tr>
+                <td>Foreground Service</td>
+                <td>Process offline queue and maintain background tasks</td>
+                <td>No data collected; processes pending link metadata</td>
+            </tr>
+            <tr>
+                <td>Boot Completed</td>
+                <td>Restore scheduled reminders after device restart</td>
+                <td>Local reminder rescheduling only</td>
+            </tr>
+            <tr>
+                <td>Vibration</td>
+                <td>Provide haptic feedback for actions</td>
+                <td>No data collected</td>
+            </tr>
+            <tr>
+                <td>Internet</td>
+                <td>Fetch link metadata, reader content, and ads</td>
+                <td>Requests go to original websites and Google AdMob</td>
+            </tr>
+            <tr>
+                <td>Files you choose</td>
+                <td>Import bookmarks or export your collection</td>
+                <td>Only user-selected files are read; exports saved locally</td>
+            </tr>
+        </table>
+
+        <h3>iOS-Specific</h3>
+        <table>
+            <tr>
+                <th>Permission</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td>Background Fetch</td>
+                <td>Process pending link metadata when app is in background</td>
+            </tr>
+            <tr>
+                <td>Background Processing</td>
+                <td>Handle offline queue and maintenance tasks</td>
+            </tr>
+            <tr>
+                <td>Remote Notifications</td>
+                <td>Receive silent push for content updates (if enabled)</td>
+            </tr>
+        </table>
+
+        <h2>3. How We Use Information</h2>
+
+        <table>
+            <tr>
+                <th>Purpose</th>
+                <th>Data Used</th>
+                <th>Where It Stays</th>
+            </tr>
+            <tr>
+                <td>Link management</td>
+                <td>URLs, titles, descriptions, tags, collections</td>
+                <td>Local Hive database on your device</td>
+            </tr>
+            <tr>
+                <td>Metadata fetching</td>
+                <td>URL you save</td>
+                <td>Request sent to original website; result stored locally</td>
+            </tr>
+            <tr>
+                <td>Reader mode</td>
+                <td>Article URL</td>
+                <td>HTML fetched from original site; parsed and stored locally</td>
+            </tr>
+            <tr>
+                <td>Reminders</td>
+                <td>Reminder time, link title</td>
+                <td>Local notifications on your device</td>
+            </tr>
+            <tr>
+                <td>Import and export</td>
+                <td>HTML, JSON, or CSV files you select or create</td>
+                <td>Processed locally; files stay in locations you control</td>
+            </tr>
+            <tr>
+                <td>Advertising</td>
+                <td>Device identifiers and ad usage data</td>
+                <td>Google AdMob</td>
+            </tr>
+        </table>
+
+        <h2>4. Data Storage and Security</h2>
+
+        <ul>
+            <li><strong>Local storage:</strong> Linkpad stores all link data, notes, collections, tags, search history, and settings in a local Hive database on your device.</li>
+            <li><strong>No developer-held link database:</strong> We do not run a central server that stores your saved links, notes, or browsing history.</li>
+            <li><strong>Rate limiting:</strong> The app implements per-host rate limiting to avoid excessive requests to external websites.</li>
+            <li><strong>Caching:</strong> Fetched metadata is cached in memory and on disk to reduce repeated network requests.</li>
+            <li><strong>No account required:</strong> Linkpad works without creating an account or providing personal information.</li>
+        </ul>
+
+        <h2>5. Third-Party Services</h2>
+
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Purpose</th>
+                <th>Data Shared</th>
+            </tr>
+            <tr>
+                <td>Original websites you save</td>
+                <td>Fetch page metadata (title, description, images)</td>
+                <td>URL request only; no personal data sent</td>
+            </tr>
+            <tr>
+                <td>Google AdMob</td>
+                <td>Advertising</td>
+                <td>Device identifiers, IP address, ad interaction data</td>
+            </tr>
+            <tr>
+                <td>Google Play Billing / Apple App Store</td>
+                <td>In-app purchases (premium features)</td>
+                <td>Purchase transactions handled by platform stores</td>
+            </tr>
+            <tr>
+                <td>Platform metadata APIs (YouTube, Instagram, X, TikTok, Reddit, Facebook, Medium, Substack)</td>
+                <td>Extract rich previews for links from these platforms</td>
+                <td>Public oEmbed / Open Graph requests only; no user data sent</td>
+            </tr>
+        </table>
+
+        <h2>6. Data Sharing</h2>
+
+        <p>We do <strong>not</strong> sell, rent, or trade your saved links, notes, or personal data. Data leaves your device only in the following cases:</p>
+        <ul>
+            <li><strong>Metadata requests:</strong> When you save a link, the app requests the target website's page to extract metadata. Only the URL is sent to the website's server.</li>
+            <li><strong>Reader mode:</strong> When you open an article in the reader, the app fetches the page from the original URL.</li>
+            <li><strong>Advertising:</strong> If your build displays ads, Google AdMob collects data under its own privacy terms.</li>
+            <li><strong>In-app purchases:</strong> Purchase transactions are processed by Google Play or the Apple App Store.</li>
+        </ul>
+
+        <h2>7. Your Rights and Choices</h2>
+
+        <ul>
+            <li><strong>No account needed:</strong> Use Linkpad without creating an account or providing personal information.</li>
+            <li><strong>Delete local data:</strong> Clear individual links, collections, or all app data from within the app, or uninstall to remove everything.</li>
+            <li><strong>Control exports:</strong> Export your collection to HTML, JSON, or CSV. Exported files are saved to locations you choose.</li>
+            <li><strong>Offline use:</strong> Save links while offline; metadata is fetched automatically when you reconnect.</li>
+            <li><strong>Ad personalization:</strong> You can manage Google's ad personalization options in your device settings.</li>
+            <li><strong>Premium upgrade:</strong> Upgrade to premium via in-app purchase to remove ads and unlock additional features.</li>
+        </ul>
+
+        <h2>8. Children's Privacy</h2>
+
+        <p>Linkpad is not directed at children under 13. We do not knowingly collect any personal information from children. If you believe a child has provided us with personal information, please contact us so we can take appropriate action.</p>
+
+        <h2>9. Changes to This Privacy Policy</h2>
+
+        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
+
+        <div class="contact-section">
+            <h2>10. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <p><strong>Email:</strong> <a href="mailto:hudaiapa88@gmail.com">hudaiapa88@gmail.com</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Linkpad. All rights reserved.</p>
+    </footer>
+</body>
+</html>
