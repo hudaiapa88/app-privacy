@@ -30,6 +30,28 @@
             font-size: 1.1rem;
             opacity: 0.9;
         }
+        .lang-switch {
+            margin-top: 20px;
+            display: inline-flex;
+            gap: 8px;
+        }
+        .lang-switch a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 6px 16px;
+            border: 1px solid rgba(255,255,255,0.7);
+            border-radius: 20px;
+        }
+        .lang-switch a.active {
+            background: white;
+            color: #1f9d6b;
+        }
+        .js .lang-section { display: none; }
+        .js .lang-section.active { display: block; }
+        .lang-section + .lang-section {
+            margin-top: 60px;
+        }
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -90,6 +112,9 @@
             margin-bottom: 30px;
             font-size: 0.95rem;
         }
+        .table-wrap {
+            overflow-x: auto;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -98,6 +123,7 @@
         th, td {
             padding: 12px;
             text-align: left;
+            vertical-align: top;
             border-bottom: 1px solid #dee2e6;
         }
         th {
@@ -122,163 +148,445 @@
             font-size: 0.9rem;
         }
     </style>
+    <script>document.documentElement.className = 'js';</script>
 </head>
 <body>
     <div class="header">
         <h1>🖥️ Vuo</h1>
-        <p>Privacy Policy</p>
+        <p>Privacy Policy · Gizlilik Politikası</p>
+        <nav class="lang-switch" aria-label="Language">
+            <a href="#en" data-lang="en" lang="en">English</a>
+            <a href="#tr" data-lang="tr" lang="tr">Türkçe</a>
+        </nav>
     </div>
-    
+
     <div class="container">
         <a href="../index.html" class="back-link">← Back to All Apps</a>
-        
-        <div class="effective-date">
-            <strong>Effective Date:</strong> December 28, 2025<br>
-            <strong>Last Updated:</strong> December 28, 2025
-        </div>
 
-        <p>This Privacy Policy describes how Vuo ("we", "us", or "our") collects, uses, and protects information when you use our serverless remote control application ("App"). We are committed to protecting your privacy while enabling secure peer-to-peer connections.</p>
+        <!-- ============================ ENGLISH ============================ -->
+        <section id="en" class="lang-section" lang="en">
+            <div class="effective-date">
+                <strong>Last Updated:</strong> November 17, 2026<br>
+                <strong>Also available in:</strong> <a href="#tr">Türkçe</a>
+            </div>
 
-        <div class="highlight-box">
-            <strong>Serverless Architecture:</strong> Vuo uses peer-to-peer (P2P) WebRTC technology. Your screen sharing data travels directly between your devices without passing through our servers. We cannot see, access, or store your screen content.
-        </div>
+            <p>This Privacy Policy explains how Vuo ("we", "us", "our") handles information when you use the Vuo phone app (Android) and the Vuo PC app (Windows). Vuo lets you see and control your Windows PC from your phone. It does not require an account.</p>
 
-        <h2>1. How Vuo Works</h2>
-        <p>Vuo enables remote control and screen sharing between your devices using:</p>
-        <ul>
-            <li><strong>WebRTC:</strong> Direct peer-to-peer connection between devices</li>
-            <li><strong>QR Code Pairing:</strong> Secure device pairing without accounts</li>
-            <li><strong>Firebase Signaling:</strong> Only used to establish initial connection (no content passes through)</li>
-        </ul>
+            <div class="highlight-box">
+                <strong>In short:</strong> Your screen, sound, input and microphone travel only between your own devices over an encrypted connection. They are <strong>never stored</strong> and are never recorded by Vuo. Our only server-side component (Supabase) is used to pair your devices and set up the connection.
+            </div>
 
-        <h2>2. Information We Collect</h2>
-        
-        <h3>2.1 Connection Data (Temporary)</h3>
-        <p>To establish P2P connections, we temporarily process:</p>
-        <ul>
-            <li><strong>Connection IDs:</strong> Random identifiers for pairing devices</li>
-            <li><strong>ICE Candidates:</strong> Network information to establish direct connections</li>
-            <li><strong>Session Descriptions:</strong> Technical data for WebRTC handshake</li>
-        </ul>
-        <p>This data is:</p>
-        <ul>
-            <li>Automatically deleted after connection is established</li>
-            <li>Never stored permanently</li>
-            <li>Not associated with any personal information</li>
-        </ul>
-
-        <h3>2.2 Screen Content</h3>
-        <div class="warning-box">
-            <strong>Important:</strong> Screen sharing content travels directly between your devices via encrypted P2P connection. We <strong>never</strong> have access to your screen content, mouse movements, keyboard input, or any data you share between devices.
-        </div>
-
-        <h3>2.3 Third-Party Data Collection</h3>
-        <div class="highlight-box">
-            <strong>Google AdMob:</strong> Our app displays advertisements through Google AdMob. AdMob may collect device identifiers, IP address, and usage data to serve personalized ads. You can opt out of personalized advertising in your device settings.
-        </div>
-
-        <h2>3. Permissions Explained</h2>
-        
-        <table>
-            <tr>
-                <th>Permission</th>
-                <th>Purpose</th>
-                <th>Data Handling</th>
-            </tr>
-            <tr>
-                <td>Screen Capture / Media Projection</td>
-                <td>Share your screen with connected device</td>
-                <td>P2P encrypted, never stored</td>
-            </tr>
-            <tr>
-                <td>Accessibility Service</td>
-                <td>Enable remote control input</td>
-                <td>Local processing only</td>
-            </tr>
-            <tr>
-                <td>Camera</td>
-                <td>Scan QR code for device pairing</td>
-                <td>Not stored or transmitted</td>
-            </tr>
-            <tr>
-                <td>Internet</td>
-                <td>P2P connection, signaling, ads</td>
-                <td>Encrypted WebRTC streams</td>
-            </tr>
-            <tr>
-                <td>Foreground Service</td>
-                <td>Maintain connection in background</td>
-                <td>No data collection</td>
-            </tr>
-        </table>
-
-        <h2>4. Accessibility Service Usage</h2>
-        <div class="warning-box">
-            <strong>Accessibility Service Disclosure:</strong> Vuo uses Android's Accessibility Service to enable remote control functionality. This service is used <strong>only</strong> to:
-            <ul style="margin-top: 12px;">
-                <li>Simulate touch events from the remote device</li>
-                <li>Enable keyboard input from the remote device</li>
+            <h2>1. How Vuo Works</h2>
+            <ul>
+                <li><strong>PC host app (Windows):</strong> captures your PC's screen and sound and sends them to your phone. It applies the touch, mouse, keyboard and controller input that you send from the phone.</li>
+                <li><strong>Phone viewer app (Android):</strong> shows the PC's screen, plays its sound and sends your input to the PC. Optionally, the phone can also share its own screen so it can be viewed and controlled from the PC.</li>
+                <li><strong>Phone as PC microphone (optional):</strong> if you turn it on, the phone's microphone is streamed to the PC and played into the VB-CABLE virtual audio device so other PC apps can use it as a microphone. Nothing is recorded.</li>
+                <li><strong>"Fit to phone" (Telefona uyarla, optional):</strong> Vuo can create a phone-shaped virtual screen using the Virtual Display Driver and move your open windows onto it while the session runs. The windows are moved back and the virtual screen is removed when the session ends.</li>
+                <li><strong>Game mode (optional):</strong> Vuo can present the phone's on-screen controller to the PC as a virtual Xbox controller using the ViGEmBus driver.</li>
+                <li><strong>Connection:</strong> the stream goes directly between your devices (on the same local network, or peer-to-peer over the internet). If a direct path is not possible, it may be relayed through a relay server that only forwards encrypted packets and cannot read them. All streams are encrypted (DTLS/SRTP).</li>
+                <li><strong>Pairing and signaling:</strong> a connection code / QR code and short connection setup messages are exchanged through Supabase. No screen, sound or input passes through it.</li>
             </ul>
-            <p style="margin-top: 12px; margin-bottom: 0;">We do <strong>not</strong> use the Accessibility Service to collect, store, or transmit any personal information, passwords, or sensitive data.</p>
-        </div>
 
-        <h2>5. Third-Party Services</h2>
-        <table>
-            <tr>
-                <th>Service</th>
-                <th>Purpose</th>
-                <th>Data Shared</th>
-            </tr>
-            <tr>
-                <td>Firebase (REST API)</td>
-                <td>Signaling for connection setup</td>
-                <td>Temporary connection metadata only</td>
-            </tr>
-            <tr>
-                <td>Google AdMob</td>
-                <td>Advertising</td>
-                <td>Device identifiers, usage data</td>
-            </tr>
-        </table>
+            <h2>2. Information Vuo Processes</h2>
+            <div class="table-wrap">
+            <table>
+                <tr>
+                    <th>Data</th>
+                    <th>Why</th>
+                    <th>Where it goes</th>
+                    <th>Retention</th>
+                </tr>
+                <tr>
+                    <td>PC screen image and sound</td>
+                    <td>Showing the PC on your phone</td>
+                    <td>Directly to your phone (encrypted)</td>
+                    <td>Not stored; streamed only during the session</td>
+                </tr>
+                <tr>
+                    <td>Touch, mouse, keyboard and controller input</td>
+                    <td>Controlling the PC from the phone</td>
+                    <td>From your phone to your PC</td>
+                    <td>Not stored</td>
+                </tr>
+                <tr>
+                    <td>Phone microphone audio (only when you turn it on)</td>
+                    <td>Using the phone as the PC's microphone (VB-CABLE)</td>
+                    <td>From your phone to your PC</td>
+                    <td>Not stored; never recorded</td>
+                </tr>
+                <tr>
+                    <td>Phone screen (only when you start phone screen sharing)</td>
+                    <td>Viewing / controlling the phone from the PC</td>
+                    <td>From your phone to your PC</td>
+                    <td>Not stored</td>
+                </tr>
+                <tr>
+                    <td>Clipboard (only if you allow it)</td>
+                    <td>Copy and paste between devices</td>
+                    <td>Between your two devices</td>
+                    <td>Not stored</td>
+                </tr>
+                <tr>
+                    <td>Files you send</td>
+                    <td>File transfer</td>
+                    <td>Between your two devices</td>
+                    <td>Saved only to the folder you choose</td>
+                </tr>
+                <tr>
+                    <td>Connection code, pairing details and connection setup data (e.g. network addresses)</td>
+                    <td>Connecting the two devices</td>
+                    <td>Supabase (signaling only)</td>
+                    <td>Temporary; deleted when the session is set up or closed</td>
+                </tr>
+                <tr>
+                    <td>Device name and trusted device list</td>
+                    <td>Approving connections</td>
+                    <td>Only on your own devices</td>
+                    <td>Until you remove them</td>
+                </tr>
+                <tr>
+                    <td>Device and advertising IDs, approximate location, app interactions, diagnostics and crash logs (Android only)</td>
+                    <td>Showing and measuring ads, preventing ad fraud</td>
+                    <td>Google AdMob and its mediation partners</td>
+                    <td>According to those companies' policies</td>
+                </tr>
+            </table>
+            </div>
 
-        <h2>6. Data Security</h2>
-        <ul>
-            <li><strong>End-to-End Encryption:</strong> All P2P communication is encrypted using DTLS/SRTP</li>
-            <li><strong>No Server Storage:</strong> Your screen content never touches our servers</li>
-            <li><strong>Temporary Signaling:</strong> Connection setup data is automatically deleted</li>
-            <li><strong>No Accounts Required:</strong> No personal information needed to use the app</li>
-        </ul>
+            <div class="warning-box">
+                <strong>Important:</strong> Vuo cannot see your screen content, sound, input, microphone or files. They never pass through our servers and are never recorded or stored by us.
+            </div>
 
-        <h2>7. Data Sharing</h2>
-        <p>We do <strong>not</strong> share your personal data. The only data that may be shared:</p>
-        <ul>
-            <li>Advertising data with Google AdMob</li>
-            <li>Temporary signaling data through Firebase (auto-deleted)</li>
-        </ul>
+            <h2>3. Android Permissions</h2>
+            <div class="table-wrap">
+            <table>
+                <tr>
+                    <th>Permission</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td>Microphone (RECORD_AUDIO)</td>
+                    <td>Only to send the phone microphone to the PC, when you turn it on.</td>
+                </tr>
+                <tr>
+                    <td>Camera</td>
+                    <td>Only to scan the pairing QR code. Images are not stored or sent.</td>
+                </tr>
+                <tr>
+                    <td>Notifications</td>
+                    <td>To show the session status while connected.</td>
+                </tr>
+                <tr>
+                    <td>Foreground services (connected device, microphone, media projection)</td>
+                    <td>To keep the connection, the microphone stream and phone screen sharing running while a session is active. Media projection is used only when you start phone screen sharing, and Android asks for your approval each time.</td>
+                </tr>
+                <tr>
+                    <td>Internet / network state</td>
+                    <td>Connecting the devices, signaling and ads.</td>
+                </tr>
+                <tr>
+                    <td>Accessibility Service</td>
+                    <td>See section 4.</td>
+                </tr>
+            </table>
+            </div>
 
-        <h2>8. Your Rights and Choices</h2>
-        <ul>
-            <li><strong>End Session:</strong> Disconnect at any time to stop all data sharing</li>
-            <li><strong>Deny Permissions:</strong> You can deny permissions (app may not function)</li>
-            <li><strong>Opt-out of Personalized Ads:</strong> Adjust in your device's Google settings</li>
-            <li><strong>Disable Accessibility Service:</strong> Turn off in Android settings when not in use</li>
-        </ul>
+            <h2>4. Accessibility Service Disclosure</h2>
+            <div class="warning-box">
+                <p>Vuo uses Android's Accessibility Service API <strong>only</strong> to perform the remote user's taps and gestures on your phone while the phone is being controlled from your PC.</p>
+                <ul>
+                    <li>The service is off by default. You enable it yourself in Android settings, after Vuo shows a prominent disclosure explaining this use and asks for your consent.</li>
+                    <li>It does <strong>not</strong> read, collect, store or share screen content, text you type, passwords or any personal data.</li>
+                    <li>No data obtained through the Accessibility API leaves your device.</li>
+                    <li>You can turn it off at any time in Android Settings → Accessibility.</li>
+                </ul>
+            </div>
 
-        <h2>9. Children's Privacy</h2>
-        <p>Vuo is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+            <h2>5. Windows PC App</h2>
+            <ul>
+                <li>Screen capture and input injection run only after you approve a connection; the PC shows an indicator during a session.</li>
+                <li>Optional drivers (Virtual Display Driver, ViGEmBus virtual controller, VB-CABLE) are installed <strong>only with your consent</strong>, and you can uninstall them at any time.</li>
+                <li>Vuo does not change your PC settings permanently: the virtual screen is removed and moved windows are restored when the session ends.</li>
+                <li>The PC app does not show ads and does not contain advertising SDKs.</li>
+            </ul>
 
-        <h2>10. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last Updated" date.</p>
+            <h2>6. Advertising (Android)</h2>
+            <p>The free Android version shows ads through Google AdMob and its mediation partners. These SDKs may collect device and advertising identifiers, approximate location (derived from IP address), app interactions (such as ad views and taps) and diagnostics / crash logs to serve, measure and protect ads.</p>
+            <ul>
+                <li>Google privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+                <li>How Google uses data from partner apps: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a></li>
+            </ul>
+            <p>You can reset your advertising ID or turn off ad personalization in your device settings.</p>
 
-        <div class="contact-section">
-            <h2>11. Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us:</p>
-            <p><strong>Email:</strong> <a href="mailto:hudaiapa88@gmail.com">hudaiapa88@gmail.com</a></p>
-        </div>
+            <h2>7. Third-Party Services</h2>
+            <div class="table-wrap">
+            <table>
+                <tr>
+                    <th>Service</th>
+                    <th>Purpose</th>
+                    <th>Data shared</th>
+                </tr>
+                <tr>
+                    <td>Supabase</td>
+                    <td>Pairing and connection signaling</td>
+                    <td>Temporary connection setup data only</td>
+                </tr>
+                <tr>
+                    <td>Google AdMob and mediation partners</td>
+                    <td>Advertising (Android)</td>
+                    <td>Device / advertising IDs, approximate location, app interactions, diagnostics</td>
+                </tr>
+            </table>
+            </div>
+            <p>We do not sell your personal data.</p>
+
+            <h2>8. Your Rights (KVKK No. 6698 and GDPR)</h2>
+            <p>Under the Turkish Personal Data Protection Law No. 6698 (KVKK) and the EU General Data Protection Regulation (GDPR), you have the right to learn whether your data is processed, to access it, to request correction or deletion, to object to processing and to lodge a complaint. Because Vuo has no accounts and does not store your streams, most of this data simply does not exist on our side. To exercise your rights, contact us at the email below. You may also apply to the Turkish Personal Data Protection Authority (KVKK) or your local data protection authority.</p>
+            <ul>
+                <li><strong>End a session</strong> at any time to stop all streaming.</li>
+                <li><strong>Deny or revoke permissions</strong> in Android settings (some features will not work).</li>
+                <li><strong>Remove trusted devices</strong> in the app.</li>
+            </ul>
+
+            <h2>9. Children's Privacy</h2>
+            <p>Vuo is not directed at children under 13. We do not knowingly collect personal information from children under 13.</p>
+
+            <h2>10. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy. The current version is always published on this page with its "Last Updated" date.</p>
+
+            <div class="contact-section">
+                <h2>11. Contact Us</h2>
+                <p>Questions or requests about this Privacy Policy:</p>
+                <p><strong>Email:</strong> <a href="mailto:hudaiapa88@gmail.com">hudaiapa88@gmail.com</a></p>
+                <p>See also: <a href="terms.html#en">Terms of Use</a></p>
+            </div>
+        </section>
+
+        <!-- ============================ TÜRKÇE ============================ -->
+        <section id="tr" class="lang-section" lang="tr">
+            <div class="effective-date">
+                <strong>Son güncelleme:</strong> 17 Kasım 2026<br>
+                <strong>Diğer dil:</strong> <a href="#en">English</a>
+            </div>
+
+            <p>Bu Gizlilik Politikası, Vuo telefon uygulamasını (Android) ve Vuo bilgisayar uygulamasını (Windows) kullandığınızda bilgilerin nasıl işlendiğini açıklar. Vuo, Windows bilgisayarınızı telefonunuzdan görmenizi ve kontrol etmenizi sağlar. Hesap gerektirmez.</p>
+
+            <div class="highlight-box">
+                <strong>Kısaca:</strong> Ekranınız, sesiniz, girdileriniz ve mikrofonunuz yalnızca kendi cihazlarınız arasında, şifreli bağlantıyla aktarılır. <strong>Hiçbir yerde saklanmaz</strong> ve Vuo tarafından kaydedilmez. Sunucu tarafında kullandığımız tek hizmet (Supabase), cihazlarınızı eşleştirmek ve bağlantıyı kurmak içindir.
+            </div>
+
+            <h2>1. Vuo Nasıl Çalışır?</h2>
+            <ul>
+                <li><strong>Bilgisayar uygulaması (Windows):</strong> bilgisayarınızın ekranını ve sesini yakalayıp telefonunuza gönderir; telefondan gönderdiğiniz dokunma, fare, klavye ve kumanda girdilerini bilgisayarda uygular.</li>
+                <li><strong>Telefon uygulaması (Android):</strong> bilgisayar ekranını gösterir, sesini çalar ve girdilerinizi bilgisayara gönderir. İsterseniz telefon kendi ekranını da paylaşabilir; böylece telefon bilgisayardan görüntülenip kontrol edilebilir.</li>
+                <li><strong>Telefonu bilgisayar mikrofonu olarak kullanma (isteğe bağlı):</strong> açarsanız telefon mikrofonu bilgisayara aktarılır ve VB-CABLE sanal ses aygıtına verilir; böylece bilgisayardaki uygulamalar onu mikrofon olarak kullanabilir. Kayıt yapılmaz.</li>
+                <li><strong>"Telefona uyarla" (isteğe bağlı):</strong> Vuo, Virtual Display Driver ile telefon biçiminde sanal bir ekran oluşturup oturum boyunca açık pencerelerinizi bu ekrana taşıyabilir. Oturum bitince pencereler geri taşınır ve sanal ekran kaldırılır.</li>
+                <li><strong>Oyun modu (isteğe bağlı):</strong> Vuo, telefondaki ekran kumandasını ViGEmBus sürücüsüyle bilgisayara sanal bir Xbox kumandası olarak tanıtabilir.</li>
+                <li><strong>Bağlantı:</strong> yayın doğrudan cihazlarınız arasında gider (aynı yerel ağda veya internet üzerinden eşler arası). Doğrudan yol kurulamazsa, yalnızca şifreli paketleri ileten ve içeriğini okuyamayan bir aktarma (relay) sunucusu üzerinden geçebilir. Tüm yayınlar şifrelidir (DTLS/SRTP).</li>
+                <li><strong>Eşleştirme ve sinyalleşme:</strong> bağlantı kodu / QR kod ve kısa bağlantı kurulum mesajları Supabase üzerinden iletilir. Ekran, ses veya girdi bu hizmetten geçmez.</li>
+            </ul>
+
+            <h2>2. Vuo'nun İşlediği Veriler</h2>
+            <div class="table-wrap">
+            <table>
+                <tr>
+                    <th>Veri</th>
+                    <th>Amaç</th>
+                    <th>Nereye gider</th>
+                    <th>Saklama</th>
+                </tr>
+                <tr>
+                    <td>Bilgisayar ekranının görüntüsü ve sesi</td>
+                    <td>Bilgisayarı telefonda göstermek</td>
+                    <td>Doğrudan telefonunuza (şifreli)</td>
+                    <td>Saklanmaz; yalnızca oturum boyunca akar</td>
+                </tr>
+                <tr>
+                    <td>Dokunma, fare, klavye ve kumanda girdileri</td>
+                    <td>Bilgisayarı telefondan kontrol etmek</td>
+                    <td>Telefonunuzdan bilgisayarınıza</td>
+                    <td>Saklanmaz</td>
+                </tr>
+                <tr>
+                    <td>Telefon mikrofonu sesi (yalnızca siz açtığınızda)</td>
+                    <td>Telefonu bilgisayarın mikrofonu olarak kullanmak (VB-CABLE)</td>
+                    <td>Telefonunuzdan bilgisayarınıza</td>
+                    <td>Saklanmaz; kayıt yapılmaz</td>
+                </tr>
+                <tr>
+                    <td>Telefon ekranı (yalnızca telefon ekran paylaşımını başlattığınızda)</td>
+                    <td>Telefonu bilgisayardan görmek / kontrol etmek</td>
+                    <td>Telefonunuzdan bilgisayarınıza</td>
+                    <td>Saklanmaz</td>
+                </tr>
+                <tr>
+                    <td>Pano içeriği (yalnızca izin verirseniz)</td>
+                    <td>Cihazlar arasında kopyala/yapıştır</td>
+                    <td>İki cihazınız arasında</td>
+                    <td>Saklanmaz</td>
+                </tr>
+                <tr>
+                    <td>Gönderdiğiniz dosyalar</td>
+                    <td>Dosya aktarımı</td>
+                    <td>İki cihazınız arasında</td>
+                    <td>Yalnızca seçtiğiniz klasöre kaydedilir</td>
+                </tr>
+                <tr>
+                    <td>Bağlantı kodu, eşleştirme bilgileri ve bağlantı kurulum verileri (ör. ağ adresleri)</td>
+                    <td>İki cihazı birbirine bağlamak</td>
+                    <td>Supabase (yalnızca sinyalleşme)</td>
+                    <td>Geçici; bağlantı kurulunca veya oturum kapanınca silinir</td>
+                </tr>
+                <tr>
+                    <td>Cihaz adı ve güvenilir cihaz listesi</td>
+                    <td>Bağlantıları onaylamak</td>
+                    <td>Yalnızca kendi cihazlarınızda</td>
+                    <td>Siz silene kadar</td>
+                </tr>
+                <tr>
+                    <td>Cihaz ve reklam kimlikleri, yaklaşık konum, uygulama etkileşimleri, tanılama verileri ve çökme kayıtları (yalnızca Android)</td>
+                    <td>Reklam göstermek ve ölçmek, reklam sahteciliğini önlemek</td>
+                    <td>Google AdMob ve aracılık (mediation) ortakları</td>
+                    <td>Bu şirketlerin politikalarına göre</td>
+                </tr>
+            </table>
+            </div>
+
+            <div class="warning-box">
+                <strong>Önemli:</strong> Vuo ekran içeriğinizi, sesinizi, girdilerinizi, mikrofonunuzu veya dosyalarınızı göremez. Bunlar sunucularımızdan geçmez; tarafımızdan kaydedilmez ve saklanmaz.
+            </div>
+
+            <h2>3. Android İzinleri</h2>
+            <div class="table-wrap">
+            <table>
+                <tr>
+                    <th>İzin</th>
+                    <th>Amaç</th>
+                </tr>
+                <tr>
+                    <td>Mikrofon (RECORD_AUDIO)</td>
+                    <td>Yalnızca siz açtığınızda telefon mikrofonunu bilgisayara göndermek için.</td>
+                </tr>
+                <tr>
+                    <td>Kamera</td>
+                    <td>Yalnızca eşleştirme QR kodunu okumak için. Görüntü saklanmaz ve gönderilmez.</td>
+                </tr>
+                <tr>
+                    <td>Bildirimler</td>
+                    <td>Bağlantı sürerken oturum durumunu göstermek için.</td>
+                </tr>
+                <tr>
+                    <td>Ön plan hizmetleri (bağlı cihaz, mikrofon, medya yansıtma)</td>
+                    <td>Oturum sürerken bağlantıyı, mikrofon aktarımını ve telefon ekran paylaşımını açık tutmak için. Medya yansıtma yalnızca telefon ekran paylaşımını başlattığınızda kullanılır ve Android her seferinde onayınızı ister.</td>
+                </tr>
+                <tr>
+                    <td>İnternet / ağ durumu</td>
+                    <td>Cihazları bağlamak, sinyalleşme ve reklamlar için.</td>
+                </tr>
+                <tr>
+                    <td>Erişilebilirlik hizmeti</td>
+                    <td>Bkz. bölüm 4.</td>
+                </tr>
+            </table>
+            </div>
+
+            <h2>4. Erişilebilirlik Hizmeti Açıklaması</h2>
+            <div class="warning-box">
+                <p>Vuo, Android Erişilebilirlik Hizmeti API'sini <strong>yalnızca</strong> telefonunuz bilgisayardan kontrol edilirken, uzaktaki kullanıcının dokunma ve hareketlerini telefonunuzda uygulamak için kullanır.</p>
+                <ul>
+                    <li>Hizmet varsayılan olarak kapalıdır. Vuo bu kullanımı açıkça anlatan bir bilgilendirme gösterip onayınızı aldıktan sonra, hizmeti Android ayarlarından siz açarsınız.</li>
+                    <li>Ekran içeriğini, yazdığınız metinleri, şifreleri veya herhangi bir kişisel veriyi <strong>okumaz, toplamaz, saklamaz ve paylaşmaz</strong>.</li>
+                    <li>Erişilebilirlik API'si üzerinden elde edilen hiçbir veri cihazınızdan çıkmaz.</li>
+                    <li>Hizmeti istediğiniz zaman Android Ayarlar → Erişilebilirlik bölümünden kapatabilirsiniz.</li>
+                </ul>
+            </div>
+
+            <h2>5. Windows Bilgisayar Uygulaması</h2>
+            <ul>
+                <li>Ekran yakalama ve girdi uygulama yalnızca siz bir bağlantıyı onayladıktan sonra çalışır; oturum sırasında bilgisayarda bir gösterge görünür.</li>
+                <li>İsteğe bağlı sürücüler (Virtual Display Driver, ViGEmBus sanal kumanda, VB-CABLE) <strong>yalnızca sizin onayınızla</strong> kurulur ve istediğiniz zaman kaldırılabilir.</li>
+                <li>Vuo bilgisayar ayarlarınızı kalıcı olarak değiştirmez: oturum bitince sanal ekran kaldırılır ve taşınan pencereler geri alınır.</li>
+                <li>Bilgisayar uygulaması reklam göstermez ve reklam SDK'sı içermez.</li>
+            </ul>
+
+            <h2>6. Reklamlar (Android)</h2>
+            <p>Ücretsiz Android sürümü Google AdMob ve aracılık ortakları üzerinden reklam gösterir. Bu SDK'lar reklamları sunmak, ölçmek ve korumak için cihaz ve reklam kimliklerini, yaklaşık konumu (IP adresinden türetilen), uygulama etkileşimlerini (reklam görüntüleme ve dokunmaları gibi) ve tanılama / çökme kayıtlarını toplayabilir.</p>
+            <ul>
+                <li>Google gizlilik politikası: <a href="https://policies.google.com/privacy?hl=tr">policies.google.com/privacy</a></li>
+                <li>Google'ın iş ortağı uygulamalardaki verileri nasıl kullandığı: <a href="https://policies.google.com/technologies/partner-sites?hl=tr">policies.google.com/technologies/partner-sites</a></li>
+            </ul>
+            <p>Reklam kimliğinizi sıfırlayabilir veya reklam kişiselleştirmesini cihazınızın ayarlarından kapatabilirsiniz.</p>
+
+            <h2>7. Üçüncü Taraf Hizmetler</h2>
+            <div class="table-wrap">
+            <table>
+                <tr>
+                    <th>Hizmet</th>
+                    <th>Amaç</th>
+                    <th>Paylaşılan veri</th>
+                </tr>
+                <tr>
+                    <td>Supabase</td>
+                    <td>Eşleştirme ve bağlantı sinyalleşmesi</td>
+                    <td>Yalnızca geçici bağlantı kurulum verileri</td>
+                </tr>
+                <tr>
+                    <td>Google AdMob ve aracılık ortakları</td>
+                    <td>Reklam (Android)</td>
+                    <td>Cihaz / reklam kimlikleri, yaklaşık konum, uygulama etkileşimleri, tanılama verileri</td>
+                </tr>
+            </table>
+            </div>
+            <p>Kişisel verilerinizi satmayız.</p>
+
+            <h2>8. Haklarınız (6698 sayılı KVKK ve GDPR)</h2>
+            <p>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve AB Genel Veri Koruma Tüzüğü (GDPR) kapsamında; verilerinizin işlenip işlenmediğini öğrenme, verilerinize erişme, düzeltilmesini veya silinmesini isteme, işlemeye itiraz etme ve şikâyette bulunma haklarına sahipsiniz. Vuo'da hesap bulunmadığı ve yayınlarınız saklanmadığı için bu verilerin çoğu bizim tarafımızda hiç bulunmaz. Haklarınızı kullanmak için aşağıdaki e-posta adresinden bize ulaşın. Ayrıca Kişisel Verileri Koruma Kurumu'na veya bulunduğunuz ülkenin veri koruma otoritesine başvurabilirsiniz.</p>
+            <ul>
+                <li>Tüm aktarımı durdurmak için <strong>oturumu istediğiniz an sonlandırabilirsiniz</strong>.</li>
+                <li><strong>İzinleri</strong> Android ayarlarından reddedebilir veya geri alabilirsiniz (bazı özellikler çalışmaz).</li>
+                <li><strong>Güvenilir cihazları</strong> uygulama içinden silebilirsiniz.</li>
+            </ul>
+
+            <h2>9. Çocukların Gizliliği</h2>
+            <p>Vuo 13 yaşın altındaki çocuklara yönelik değildir. 13 yaşın altındaki çocuklardan bilerek kişisel veri toplamayız.</p>
+
+            <h2>10. Bu Politikadaki Değişiklikler</h2>
+            <p>Bu politikayı güncelleyebiliriz. Güncel sürüm, "Son güncelleme" tarihiyle birlikte her zaman bu sayfada yayınlanır.</p>
+
+            <div class="contact-section">
+                <h2>11. İletişim</h2>
+                <p>Bu Gizlilik Politikası hakkındaki sorularınız ve talepleriniz için:</p>
+                <p><strong>E-posta:</strong> <a href="mailto:hudaiapa88@gmail.com">hudaiapa88@gmail.com</a></p>
+                <p>Ayrıca bkz.: <a href="terms.html#tr">Kullanım Koşulları</a></p>
+            </div>
+        </section>
     </div>
-    
+
     <footer>
-        <p>© 2025 Vuo. All rights reserved.</p>
+        <p>© 2026 Vuo. All rights reserved. · Tüm hakları saklıdır.</p>
     </footer>
+
+    <script>
+        (function () {
+            var links = document.querySelectorAll('.lang-switch a');
+            function show(lang) {
+                document.querySelectorAll('.lang-section').forEach(function (s) {
+                    s.classList.toggle('active', s.id === lang);
+                });
+                links.forEach(function (a) {
+                    a.classList.toggle('active', a.getAttribute('data-lang') === lang);
+                });
+                document.documentElement.lang = lang;
+            }
+            function pick() {
+                var h = location.hash.replace('#', '');
+                if (h === 'en' || h === 'tr') return h;
+                var nav = (navigator.language || '').toLowerCase();
+                return nav.indexOf('tr') === 0 ? 'tr' : 'en';
+            }
+            window.addEventListener('hashchange', function () { show(pick()); window.scrollTo(0, 0); });
+            show(pick());
+        })();
+    </script>
 </body>
 </html>
